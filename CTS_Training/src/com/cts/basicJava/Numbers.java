@@ -158,33 +158,28 @@ public class Numbers {
 			return "";
 	}
 	public String numToWords(int num){
-		String ones[]={"One","Two","Three","Four","Five","Six","Seven","Eight",
-				"Nine","Ten","Eleven","Twelve","Thirteen","Fourteen","Fifteen",
-				"Sixteen","Seventeen","Eighteen","Nineteen"};
-		String tens[]={"Twenty","Thirty","Fourty","Fifty","Sixty","Seventy",
-				"Eighty","Ninety"};
-		String word[]={"","",""};
-		int i,j=num%100;
-		while(num>0){
-			i=num%10;
-			if(num>=100&&i>0){
-				word[2]=word[2].concat(ones[i-1]);
-			}
-			else if(num>=10&&num<100&&i>0){
-				if(j>=11&&j<20){
-					word[1]=word[1].concat(ones[j-1]);
-					break;
-				}
-				else{
-				word[1]=word[1].concat(tens[i-2]);
-				}
-			}
-			else{
-				word[0]=word[0].concat(ones[i-1]);
-			}
-			num=num/10;
-		}
-		return word[0]+' '+word[1]+' '+word[2];
-	}
+		String[] tensNames = { ""," ten"," twenty"," thirty",
+		" forty"," fifty"," sixty"," seventy"," eighty"," ninety"};
 
+		String[] numNames = {""," one"," two"," three"," four"," five",
+			    " six"," seven"," eight"," nine"," ten"," eleven"," twelve"," thirteen",
+			    " fourteen"," fifteen"," sixteen"," seventeen"," eighteen"," nineteen"};
+			    String numWords;
+
+			    if (num % 100 < 20){
+			      numWords = numNames[num % 100];
+			      num /= 100;
+			    }
+			    else {
+			      numWords = numNames[num % 10];
+			      num /= 10;
+
+			      numWords = tensNames[num % 10] + numWords;
+			      num /= 10;
+			    }
+			    if (num == 0) return numWords;
+			    return numNames[num] + " hundred" + numWords;
+	}
+			 
 }
+

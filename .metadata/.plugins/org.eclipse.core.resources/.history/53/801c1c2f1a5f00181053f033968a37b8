@@ -1,0 +1,18 @@
+package com.cts.services;
+
+
+import java.util.List;
+
+import com.cts.beans.Department;
+import com.cts.beans.Employee;
+
+public interface DepartmentService {
+	
+	public boolean create(Department dept);
+	
+	public boolean delete(int deptId);
+	
+	public boolean update(Department dept);
+	
+	public boolean get(int deptId);
+}

@@ -49,7 +49,7 @@ public class PrintPattern {
 		for(int i=1;i<=l;i++){
 			for(int j=1;j<=b;j++){
 				if(i==1||i==l){
-					System.out.print("_");
+					System.out.print("-");
 				}
 				else{
 					if(j==1||j==b){

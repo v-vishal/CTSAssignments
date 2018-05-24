@@ -1,0 +1,6 @@
+public class TryTest {
+	public static void main(String[] args) {
+		Try t=new Try();
+		System.out.print(t.convertToWords(987));
+	}
+}

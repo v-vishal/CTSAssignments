@@ -2,7 +2,11 @@
 <qualifiedTypeNameHistroy>
 <fullyQualifiedTypeName name="com.cts.services.EmployeeService"/>
 <fullyQualifiedTypeName name="com.cts.services.impl.EmployeeServiceImpl"/>
-<fullyQualifiedTypeName name="com.cts.beans.Employee"/>
-<fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="java.util.ArrayList"/>
+<fullyQualifiedTypeName name="java.util.Collections"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="com.cts.beans.Department"/>
+<fullyQualifiedTypeName name="com.cts.beans.Employee"/>
+<fullyQualifiedTypeName name="com.cts.services.DepartmentService"/>
 </qualifiedTypeNameHistroy>
