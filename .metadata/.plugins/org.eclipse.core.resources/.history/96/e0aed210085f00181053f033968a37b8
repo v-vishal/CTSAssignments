@@ -1,0 +1,12 @@
+package com.cts.basicJava;
+
+public class PatternTest {
+	public static void main(String args[]){
+		//Printer.stars1(5);
+		//Printer.stars2(5);
+		//Printer.stars3(5);
+		//Printer.numTriangle(5);
+		Printer.rectangle(5,8);
+		}
+
+}

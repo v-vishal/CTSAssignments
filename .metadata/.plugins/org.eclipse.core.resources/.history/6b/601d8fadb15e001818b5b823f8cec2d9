@@ -1,0 +1,18 @@
+package com.cts.services;
+
+import com.cts.beans.Employee;
+import com.cts.services.impl.EmployeeServiceImpl;
+
+public class EmployeeTest {
+	public static void main(String[] args) {
+		EmployeeService emplService=new EmployeeServiceImpl();
+		Employee empl;
+		empl= new Employee(101,"Vishal",10000);
+		emplService.create(empl);
+		empl=new Employee(102,"Rajesh",12000);
+		emplService.create(empl);
+		emplService.display(empl);
+		emplService.display();
+	}
+
+}

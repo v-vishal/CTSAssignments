@@ -1,0 +1,66 @@
+package com.cts.services.impl;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import com.cts.beans.Employee;
+import com.cts.services.EmployeeService;
+
+public class EmployeeServiceImpl implements EmployeeService {
+	private List<Employee> empList;
+	public EmployeeServiceImpl(){
+		empList=new ArrayList<Employee>();
+	}
+	@Override
+	public boolean create(Employee empl) {
+		if(get(empl.getId())!=null) {
+			return false;
+		}
+		empList.add(empl);
+		return true;
+	}
+
+	@Override
+	public boolean remove(int id) {
+			Employee emp=get(id);
+			if(emp==null) {
+				return false;
+			}
+			empList.remove(emp);
+			return true;
+	}
+
+	@Override
+	public boolean update(Employee empl) {
+		if(get(empl.getId())==null) {
+			return false;
+		}
+		empList.add(empl);
+		return true;
+	}
+	
+
+	@Override
+	public Employee get(int id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<Employee> get() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public void display(Employee emp) {
+		// TODO Auto-generated method stub
+		
+	}
+	@Override
+	public void display(List<Employee> emp) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}

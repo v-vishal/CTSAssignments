@@ -1,0 +1,24 @@
+package com.cts.services;
+
+import java.util.List;
+
+import com.cts.beans.Employee;
+
+public interface EmployeeService {
+	
+
+	public boolean create(Employee empl);
+		
+	public boolean remove(int id);
+	
+	public boolean update(Employee emp);
+	 
+	public Employee get(int id);
+	
+	public List<Employee> get();
+	
+	public void display(Employee emp);
+	
+	public void display(List<Employee> emp);
+
+}
